@@ -8,7 +8,7 @@ const AddNewService = () => {
     const history = useHistory()
     const onSubmit = data => {
         console.log(data);
-        axios.post('http://localhost:5000/addServices', data)
+        axios.post('https://haunted-eyeballs-16194.herokuapp.com/addServices', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert("Insertion was successful");

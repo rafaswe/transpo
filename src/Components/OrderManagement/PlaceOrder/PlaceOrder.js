@@ -10,7 +10,7 @@ const PlaceOrder = () => {
     const { user } = useAuth();
     const { _id } = useParams();
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${_id}`)
+        fetch(`https://haunted-eyeballs-16194.herokuapp.com/services/${_id}`)
             .then(res => res.json())
             .then(data => setService(data))
     }, [])
@@ -18,7 +18,7 @@ const PlaceOrder = () => {
     // console.log(service)
 
     const onSubmit = data => {
-        axios.post('http://localhost:5000/order', data)
+        axios.post('https://haunted-eyeballs-16194.herokuapp.com/order', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert("Insertion was successful. See your Product History in My order Section");

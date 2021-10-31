@@ -8,7 +8,7 @@ const SingleOrder = (props) => {
     const [updateOrder, setUpdateOrder] = useState({});
 
     useEffect(() => {
-        const url = `http://localhost:5000/orders/${_id}`;
+        const url = `https://haunted-eyeballs-16194.herokuapp.com/orders/${_id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setUpdateOrder(data))
@@ -21,13 +21,13 @@ const SingleOrder = (props) => {
     // }
 
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://haunted-eyeballs-16194.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, []);
 
     const handleUpdateStatus = (_id) => {
-        axios.put(`http://localhost:5000/order/${_id}`, {
+        axios.put(`https://haunted-eyeballs-16194.herokuapp.com/order/${_id}`, {
             status: 'Approved'
         })
             .then(response => {
@@ -42,7 +42,7 @@ const SingleOrder = (props) => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure to Delete? ');
         if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://haunted-eyeballs-16194.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

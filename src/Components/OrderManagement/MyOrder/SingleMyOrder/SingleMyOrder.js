@@ -6,14 +6,14 @@ const SingleMyOrder = (props) => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://haunted-eyeballs-16194.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, []);
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure to Delete? ');
         if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://haunted-eyeballs-16194.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
