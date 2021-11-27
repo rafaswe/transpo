@@ -29,7 +29,7 @@ const SingleMyOrder = (props) => {
     }
     return (
         <div>
-            <div className="row gx-4 my-5 border border-3 p-4 rounded rounded-3 shadow-lg">
+            <div className="row gx-4 my-5 border border-3 p-4 rounded rounded-3">
                 <div className="col-lg-4 col-sm-12">
                     <h4>User's Information</h4>
                     <p>Name: {name}</p>

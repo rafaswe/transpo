@@ -9,6 +9,7 @@ const PlaceOrder = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const { user } = useAuth();
     const { _id } = useParams();
+    console.log(_id)
     useEffect(() => {
         fetch(`https://haunted-eyeballs-16194.herokuapp.com/services/${_id}`)
             .then(res => res.json())

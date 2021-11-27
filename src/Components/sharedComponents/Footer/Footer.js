@@ -16,7 +16,9 @@ const Footer = () => {
         window.open('mailto:transpo@gmail.com?subject=subject&body=' + msgBody);
     }
     return (
+
         <div className="bg-dark py-4">
+            <h1>hello</h1>
             <Container className="mb-4">
                 <div className="row align-items-center">
                     <div className="col-sm-12 col-lg-4">
